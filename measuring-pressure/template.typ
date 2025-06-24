@@ -9,8 +9,10 @@
       cell(value, fill: orange)
     } else if num >= 130 and num < 140{ 
       cell(value, fill: yellow)
+    } else if num < 110{ 
+      cell(value, fill: blue)
     } else {
-      cell(text(weight: "bold", value), fill: green)
+      cell(value, fill: green)
     }
   } else {
     value
