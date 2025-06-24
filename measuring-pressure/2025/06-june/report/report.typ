@@ -1,5 +1,7 @@
 #import "../../../template.typ": *
 
+#show table.cell: set text(weight: "extrabold")
+
 #let results = csv("../results.csv")
 #table(
     columns: 9,

@@ -1,7 +1,5 @@
 #import table: cell, header
 
-#show table.cell: set text(weight: "extrabold")
-
 #let pressure-cell(value) = {
   if value != "" {
     let num = int(value.slice(0, count: 3))
