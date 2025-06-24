@@ -14,14 +14,14 @@
     cell([*Date*], rowspan: 3), cell([*Afternoon*], colspan: 4), cell([*Evening*], colspan: 4),
     cell([*Left hand*], colspan: 2), cell([*Right hand*], colspan: 2), cell([*Left hand*], colspan: 2), cell([*Right hand*], colspan: 2),
     [*Blood pressure*], [*Pulse*], [*Blood pressure*], [*Pulse*], [*Blood pressure*], [*Pulse*], [*Blood pressure*], [*Pulse*],
-
+    
     // Russian version of the header
     /*
     cell([*Дата*], rowspan: 3), cell([*День*], colspan: 4), cell([*Вечер*], colspan: 4),
     cell([*Левая рука*], colspan: 2), cell([*Правая рука*], colspan: 2), cell([*Левая рука*], colspan: 2), cell([*Правая рука*], colspan: 2),
     [*Давление*], [*Пульс*], [*Давление*], [*Пульс*], [*Давление*], [*Пульс*], [*Давление*], [*Пульс*],
     */
-
+    
     ..results.map(row => (
       cell(row.at(0)),
       pressure-cell(row.at(1)),
