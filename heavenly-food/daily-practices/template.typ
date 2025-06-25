@@ -40,3 +40,15 @@
     value
   }
 }
+#let books-cell(value) = {
+  if value != "" {
+    let num = int(value)
+    if num == 0 {
+      cell(value, fill: red)
+    } else {
+      cell(value, fill: green)
+    }
+  } else {
+    value
+  }
+}
