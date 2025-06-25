@@ -14,10 +14,10 @@
         // English version of the header
         /*
         cell([Date], rowspan: 2),
-        cell([Bible], colspan: 5),
-        cell([Old Testament], colspan: 2), cell([New Testament], colspan: 2), [Morning Revival],
+        cell([Bible], colspan: 8),
+        cell([Old Testament], colspan: 2), cell([New Testament], colspan: 2), cell([Morning Revival], colspan: 2), cell([Books], colspan: 2),
         */
-
+        
         // Russian version of the header
         cell([Дата], rowspan: 2),
         cell([Библия], colspan: 8),
