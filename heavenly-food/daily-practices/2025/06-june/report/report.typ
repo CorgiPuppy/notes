@@ -1,11 +1,16 @@
 #import "../../../template.typ": *
 
+#set page(
+	paper: "a4",
+	margin: (x: 0.2cm, y: 1.5cm),
+)
+
 #show table.cell: set text(weight: "extrabold")
 
 #let results = csv("../results.csv")
 #figure(
     table(
-        columns: 9,
+        columns: 11,
         align: center + horizon,
         fill: (x, y) => if calc.even(x) or y < 2 {
             rgb(230, 230, 230)
@@ -20,8 +25,8 @@
         
         // Russian version of the header
         cell([Дата], rowspan: 2),
-        cell([Библия], colspan: 8),
-        cell([Ветхий Завет], colspan: 2), cell([Новый Завет], colspan: 2), cell([Утреннее оживление], colspan: 2), cell([Книга служения], colspan: 2),
+        cell([Библия], colspan: 10),
+        cell([Ветхий Завет], colspan: 2), cell([Новый Завет], colspan: 2), cell([Утреннее оживление], colspan: 2), cell([Книга служения], colspan: 4), 
 
         ..results.map(row => (
             cell(row.at(0)),
@@ -33,6 +38,8 @@
             cell(row.at(6)),
             books-cell(row.at(7)),
             cell(row.at(8)),
+            life-study-cell(row.at(9)),
+            cell(row.at(10)),
         )).flatten()
     )
 )
