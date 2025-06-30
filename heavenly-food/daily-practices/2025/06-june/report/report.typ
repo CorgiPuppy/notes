@@ -1,8 +1,7 @@
 #import "../../../template.typ": *
 
 #set page(
-	paper: "a4",
-	margin: (x: 0.2cm, y: 1.5cm),
+	paper: "a3",
 )
 
 #show table.cell: set text(weight: "extrabold")
