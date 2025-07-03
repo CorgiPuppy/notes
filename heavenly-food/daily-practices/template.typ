@@ -53,7 +53,7 @@
 }
 #let books-cell(value) = {
   if value != "" {
-    let num = int(value)
+    let num = float(value)
     if num == 0 {
       cell(value, fill: red)
     } else if num == 0.5 {
@@ -67,7 +67,7 @@
 }
 #let life-study-cell(value) = {
   if value != "" {
-    let num = int(value)
+    let num = float(value)
     if num == 0 {
       cell(value, fill: red)
     } else if num == 0.5 {
