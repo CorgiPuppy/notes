@@ -54,11 +54,11 @@
         second: int(timeParts.at(2))
     )
 
-    if (date == date-today) and (time.hour() == 06 and time.minute() == 00) {
+    if (datetime(year: int(dateParts-today.at(2)), month: int(dateParts-today.at(1)), day: int(dateParts-today.at(0)) + 1) == datetime(year: int(dateParts.at(0)), month: int(dateParts.at(1)), day: int(dateParts.at(2)))) and (time.hour() == 06 and time.minute() == 00) {
         cell(value, fill: green)
-    } else if (date == date-today) and ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 06 and time.minute() <= 30)) {
+    } else if (datetime(year: int(dateParts-today.at(2)), month: int(dateParts-today.at(1)), day: int(dateParts-today.at(0)) + 1) == datetime(year: int(dateParts.at(0)), month: int(dateParts.at(1)), day: int(dateParts.at(2)))) and ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 06 and time.minute() <= 30)) {
         cell(value, fill: yellow)     
-    } else if (date == date-today) and ((time.hour() == 05 and time.minute() < 30) or (time.hour() == 06 and time.minute() > 30)) {
+    } else if (datetime(year: int(dateParts-today.at(2)), month: int(dateParts-today.at(1)), day: int(dateParts-today.at(0)) + 1) == datetime(year: int(dateParts.at(0)), month: int(dateParts.at(1)), day: int(dateParts.at(2)))) and ((time.hour() == 05 and time.minute() < 30) or (time.hour() == 06 and time.minute() > 30)) {
         cell(value, fill: orange)
     } else {
         cell(value, fill: red)
