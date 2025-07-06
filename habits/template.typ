@@ -112,3 +112,25 @@
     value
   }
 }
+#let learning-cell(value) = {
+  if value != "" {
+    let num = int(value)
+    if num == 0 {
+      cell(value, fill: red)
+    } else if num > 0 and num < 120 {
+      cell(value, fill: orange)
+    } else if num >= 120 and num < 240 {
+      cell(value, fill: rgb(255, 205, 0))
+    } else if num >= 240 and num < 360 {
+      cell(value, fill: rgb(225, 225, 0))
+    } else if num >= 360 and num < 480 {
+      cell(value, fill: rgb(200, 255, 0))
+    } else if num == 480 {
+      cell(value, fill: rgb(0, 255, 0))
+    } else {
+      cell(value, fill: rgb(0, 255, 255))
+    }
+  } else {
+    value
+  }
+}
