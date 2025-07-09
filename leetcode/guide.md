@@ -59,6 +59,44 @@ Once you've created an account, take advantage of the platform's tools like filt
 | Difficulty Filters | Start with easier challenges and gradually level up |
 | Discussion Forums | Gain insights from community solutions and tips |
 
-*LeetCode Explore* cards are especially helpful, offering guided learning paths that combine theory with practival problems.
+*LeetCode Explore* cards are especially helpful, offering guided learning paths that combine theory with practical problems.
 
 With these basics covered, you're ready to dive into solving problems and improving your skills step by step.
+
+## Implroving Problem-Solving Skills
+
+### Using a Structured Problem-Solving Method
+
+The first step is to carefully analyze the problem statement. Break it into smaller parts and focus on the critical aspects:
+
+| Step | What to Look For |
+| ---- | ---------------- |
+| Input Analysis | Data types, size limits, edge cases |
+| Output Requirements | Expected format, validation rules |
+| Constraints | Time/space complexity, special conditions |
+| Test Cases | Typical inputs, edge cases, unexpected scenarios |
+
+Sketching out your solution beforehand can help you spot potential problems and guide your implementation process.
+
+### Practicing Key Coding Patters
+
+Familiarize yourself with common coding patterns like *Sliding Window*, *Two Pointers*, and *Dynamic Programming*. These patterns are frequently used in interviews and can simplify a wide range of problems.
+
+| Pattern | Where It Helps |
+| ------- | -------------- |
+| Sliding Window | String or array operations |
+| Two Pointers | Array manipulation, linked lists |
+| Dynamic Programming | Optimization problems |
+| Greedy Algorithms | Scheduling, resource allocation |
+
+### Progressing from Easy to Hard Problems
+
+Start with easy problems to build a solid foundation, then gradually work your way up to medium and hard challenges. Use *LeetCode's Explore* cards or curated problem lists to practice systematically.
+
+| Difficulty | Key Topics to Focus On |
+| ---------- | ---------------------- |
+| Easy | Array manipulation, basic string operations |
+| Medium | Tree traversal, graph algorithms |
+| Hard | Advanced dynamic programming, complex optimizations |
+
+If you get stuck, review solutions from others, but make sure to understand the logic behind them before moving forward. These strategies will help you consistently improve and build mastery on LeetCode.
