@@ -23,12 +23,14 @@
             second: int(timeParts.at(2))
         )
 
-        if (date == date-today) and (time.hour() == 22 and time.minute() == 30) {
-            cell(value, fill: green)
-        } else if (date == date-today) and (time.hour() >= 22 and time.hour() < 23) {
-            cell(value, fill: yellow)     
-        } else if date == date-today and ((time.hour() >= 21 and time.hour() < 22) or time.hour() == 23) {
-            cell(value, fill: orange)
+        if (date == date-today - duration(days: 1)) {
+            if (time.hour() == 22 and time.minute() == 30) {
+                cell(value, fill: green)
+            } else if (time.hour() >= 22 and time.hour() < 23) {
+                cell(value, fill: yellow)     
+            } else if ((time.hour() >= 21 and time.hour() < 22) or time.hour() == 23) {
+                cell(value, fill: orange)
+            }
         } else {
             cell(value, fill: red)
         }
@@ -57,12 +59,16 @@
             second: int(timeParts.at(2))
         )
 
-        if (datetime(year: int(dateParts-today.at(2)), month: int(dateParts-today.at(1)), day: int(dateParts-today.at(0)) + 1) == datetime(year: int(dateParts.at(0)), month: int(dateParts.at(1)), day: int(dateParts.at(2)))) and (time.hour() == 06 and time.minute() == 00) {
-            cell(value, fill: green)
-        } else if (datetime(year: int(dateParts-today.at(2)), month: int(dateParts-today.at(1)), day: int(dateParts-today.at(0)) + 1) == datetime(year: int(dateParts.at(0)), month: int(dateParts.at(1)), day: int(dateParts.at(2)))) and ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 06 and time.minute() <= 30)) {
-            cell(value, fill: yellow)     
-        } else if (datetime(year: int(dateParts-today.at(2)), month: int(dateParts-today.at(1)), day: int(dateParts-today.at(0)) + 1) == datetime(year: int(dateParts.at(0)), month: int(dateParts.at(1)), day: int(dateParts.at(2)))) and ((time.hour() == 05 and time.minute() < 30) or (time.hour() == 06 and time.minute() > 30)) {
-            cell(value, fill: orange)
+        if (date == date-today) {
+            if (time.hour() == 06 and time.minute() == 00) {
+                cell(value, fill: green)
+            } else if ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 06 and time.minute() <= 30)) {
+                cell(value, fill: yellow)     
+            } else if ((time.hour() == 05 and time.minute() < 30) or (time.hour() == 06 and time.minute() > 30)) {
+                cell(value, fill: orange)
+            } else {
+                cell(value, fill: red)
+            }
         } else {
             cell(value, fill: red)
         }
@@ -119,6 +125,7 @@
 #let learning-cell(value) = {
   if value != "" {
     let num = int(value)
+    value = str(duration(minutes: num).hours())
     if num == 0 {
       cell(value, fill: red)
     } else if num > 0 and num < 120 {
