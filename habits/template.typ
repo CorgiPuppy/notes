@@ -25,14 +25,14 @@
 
         if (date == date-today - duration(days: 1)) {
             if (time.hour() == 22 and time.minute() == 30) {
-                cell(value, fill: green)
+                cell(value, fill: rgb(0, 255, 0))
             } else if (time.hour() >= 22 and time.hour() < 23) {
                 cell(value, fill: yellow)     
             } else if ((time.hour() >= 21 and time.hour() < 22) or time.hour() == 23) {
-                cell(value, fill: orange)
+                cell(value, fill: rgb(255, 165, 0))
             }
         } else {
-            cell(value, fill: red)
+            cell(value, fill: rgb(255, 0, 0))
         }
     }
 }
@@ -61,16 +61,16 @@
 
         if (date == date-today) {
             if (time.hour() == 06 and time.minute() == 00) {
-                cell(value, fill: green)
+                cell(value, fill: rgb(0, 255, 0))
             } else if ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 06 and time.minute() <= 30)) {
                 cell(value, fill: yellow)     
             } else if ((time.hour() == 05 and time.minute() < 30) or (time.hour() == 06 and time.minute() > 30)) {
-                cell(value, fill: orange)
+                cell(value, fill: rgb(255, 165, 0))
             } else {
-                cell(value, fill: red)
+                cell(value, fill: rgb(255, 0, 0))
             }
         } else {
-            cell(value, fill: red)
+            cell(value, fill: rgb(255, 0, 0))
         }
     }
 }
@@ -78,9 +78,9 @@
   if value != "" {
     let num = int(value)
     if num == 1 {
-      cell(value, fill: green)
+      cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: red)
+      cell(value, fill: rgb(255, 0, 0))
     }
   } else {
     value
@@ -90,9 +90,9 @@
   if value != "" {
     let num = int(value)
     if num == 1 {
-      cell(value, fill: green)
+      cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: red)
+      cell(value, fill: rgb(255, 0, 0))
     }
   } else {
     value
@@ -102,9 +102,9 @@
   if value != "" {
     let num = int(value)
     if num == 1 {
-      cell(value, fill: green)
+      cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: red)
+      cell(value, fill: rgb(255, 0, 0))
     }
   } else {
     value
@@ -114,9 +114,9 @@
   if value != "" {
     let num = int(value)
     if num == 1 {
-      cell(value, fill: green)
+      cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: red)
+      cell(value, fill: rgb(255, 0, 0))
     }
   } else {
     value
@@ -127,9 +127,9 @@
     let num = int(value)
     value = str(calc.round(duration(minutes: num).hours(), digits: 2))
     if num == 0 {
-      cell(value, fill: red)
+      cell(value, fill: rgb(255, 0, 0))
     } else if num > 0 and num < 120 {
-      cell(value, fill: orange)
+      cell(value, fill: rgb(255, 165, 0))
     } else if num >= 120 and num < 240 {
       cell(value, fill: rgb(255, 205, 0))
     } else if num >= 240 and num < 360 {
@@ -150,9 +150,9 @@
     let num = int(value)
     value = str(calc.round(duration(minutes: num).hours(), digits: 2))
     if num == 0 {
-      cell(value, fill: red)
+      cell(value, fill: rgb(255, 0, 0))
     } else if num > 0 and num < 15 {
-      cell(value, fill: orange)
+      cell(value, fill: rgb(255, 165, 0))
     } else if num >= 15 and num < 30 {
       cell(value, fill: rgb(255, 205, 0))
     } else if num >= 30 and num < 45 {
