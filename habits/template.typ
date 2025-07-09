@@ -77,10 +77,12 @@
 #let brush-cell(value) = {
   if value != "" {
     let num = int(value)
-    if num == 1 {
+    if num == 0 {
+      cell(value, fill: rgb(255, 0, 0))
+    } else if num == 1 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: rgb(255, 0, 0))
+      cell(value, fill: rgb(0, 255, 255))
     }
   } else {
     value
@@ -89,10 +91,12 @@
 #let irrigator-cell(value) = {
   if value != "" {
     let num = int(value)
-    if num == 1 {
+    if num == 0 {
+      cell(value, fill: rgb(255, 0, 0))
+    } else if num == 1 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: rgb(255, 0, 0))
+      cell(value, fill: rgb(0, 255, 255))
     }
   } else {
     value
@@ -101,10 +105,12 @@
 #let mouthwash-cell(value) = {
   if value != "" {
     let num = int(value)
-    if num == 1 {
+    if num == 0 {
+      cell(value, fill: rgb(255, 0, 0))
+    } else if num == 1 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: rgb(255, 0, 0))
+      cell(value, fill: rgb(0, 255, 255))
     }
   } else {
     value
@@ -113,10 +119,12 @@
 #let mouth-guards-cell(value) = {
   if value != "" {
     let num = int(value)
-    if num == 1 {
+    if num == 0 {
+      cell(value, fill: rgb(255, 0, 0))
+    } else if num == 1 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
-      cell(value, fill: rgb(255, 0, 0))
+      cell(value, fill: rgb(0, 255, 255))
     }
   } else {
     value
