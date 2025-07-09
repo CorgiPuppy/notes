@@ -125,7 +125,7 @@
 #let learning-cell(value) = {
   if value != "" {
     let num = int(value)
-    value = str(duration(minutes: num).hours())
+    value = str(calc.round(duration(minutes: num).hours(), digits: 2))
     if num == 0 {
       cell(value, fill: red)
     } else if num > 0 and num < 120 {
@@ -137,6 +137,29 @@
     } else if num >= 360 and num < 480 {
       cell(value, fill: rgb(200, 255, 0))
     } else if num == 480 {
+      cell(value, fill: rgb(0, 255, 0))
+    } else {
+      cell(value, fill: rgb(0, 255, 255))
+    }
+  } else {
+    value
+  }
+}
+#let workout-cell(value) = {
+  if value != "" {
+    let num = int(value)
+    value = str(calc.round(duration(minutes: num).hours(), digits: 2))
+    if num == 0 {
+      cell(value, fill: red)
+    } else if num > 0 and num < 15 {
+      cell(value, fill: orange)
+    } else if num >= 15 and num < 30 {
+      cell(value, fill: rgb(255, 205, 0))
+    } else if num >= 30 and num < 45 {
+      cell(value, fill: rgb(225, 225, 0))
+    } else if num >= 45 and num < 60 {
+      cell(value, fill: rgb(200, 255, 0))
+    } else if num == 60 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
       cell(value, fill: rgb(0, 255, 255))
