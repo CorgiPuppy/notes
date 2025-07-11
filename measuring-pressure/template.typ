@@ -2,7 +2,12 @@
 
 #let pressure-cell(value) = {
   if value != "" {
-    let num = int(value.slice(0, count: 3))
+    let num
+    if value.len() == 5 {
+      num = int(value.slice(0, count: 2))
+    } else {
+      num = int(value.slice(0, count: 3))
+    }
     if num >= 150 {
       cell(value, fill: rgb(255, 0, 0))
     } else if num >= 140 and num < 150{ 
