@@ -2,6 +2,7 @@
 
 #set page(
 	paper: "a3",
+    margin: (x: 3cm, y: 3cm),
 )
 
 #show table.cell: set text(weight: "extrabold")
