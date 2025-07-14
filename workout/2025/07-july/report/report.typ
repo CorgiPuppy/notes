@@ -4,6 +4,9 @@
 
 #let jsonData = json("../results.json")
 #for value in jsonData {
+    set text(
+        size: 10pt,
+    )
     align(
         center,
     )[
@@ -15,80 +18,46 @@
             )[ #value.date ]
         )
     ]
-    for index in range(0, 8+1) {
-        set text(
-            size: 9pt,
-        )
+    for index in range(0, value.train.len()) {
         box(rect(
             stroke: 1pt,
             fill: rgb(230, 230, 230),
             align(
                 center + horizon,
-                value.train.at(index).type
+                list(
+                    marker: [--],
+                    body-indent: 5pt,
+                    value.train.at(index).type
+                )
             )
         ))
         for round in ("1", "2", "3") {
-            if value.train.at(index).type == "Подтягивания" {
-                if round in value.train.at(index) and value.train.at(index).at(round) != "" {
-                    box(square(
-                        stroke: 1pt,
-                        fill: if int(value.train.at(index).at(round)) == 10 {
-                            rgb(0, 255, 0)
-                        } else {
-                            rgb(255, 0, 0)
-                        },
-                        align(
-                            center + horizon,
-                            value.train.at(index).at(round)
-                        ) 
-                    ))
-                }  
-            } else if value.train.at(index).type == "Отжимания на брусьях" {
-                if round in value.train.at(index) and value.train.at(index).at(round) != "" {
-                    box(square(
-                        stroke: 1pt,
-                        fill: if int(value.train.at(index).at(round)) == 10 {
-                            rgb(0, 255, 0)
-                        } else {
-                            rgb(255, 0, 0)
-                        },
-                        align(
-                            center + horizon,
-                            value.train.at(index).at(round)
-                        ) 
-                    ))
-                }
-            } else if value.train.at(index).type == "Поднятие ног, согнутых в коленях, и их закручивание на 90 градусов в каждую сторону" {
-                if round in value.train.at(index) and value.train.at(index).at(round) != "" {
-                    box(square(
-                        stroke: 1pt,
-                        fill: if int(value.train.at(index).at(round)) == 10 {
-                            rgb(0, 255, 0)
-                        } else {
-                            rgb(255, 0, 0)
-                        },
-                        align(
-                            center + horizon,
-                            value.train.at(index).at(round)
-                        ) 
-                    ))
-                }
-            } else {
-                if round in value.train.at(index) and value.train.at(index).at(round) != "" {
-                    box(square(
-                        stroke: 1pt,
-                        fill: if int(value.train.at(index).at(round)) == 10 {
-                            rgb(0, 255, 0)
-                        } else {
-                            rgb(255, 0, 0)
-                        },
-                        align(
-                            center + horizon,
-                            value.train.at(index).at(round)
-                        ) 
-                    ))
-                }
+            if round in value.train.at(index) and value.train.at(index).at(round) != "" {
+                box(rect(
+                    value.train.at(index).at(round)
+                )) 
             }
+            if (value.train.at(index).type == "Ходьба") {
+                box(rect(
+                    [ #value.train.at(index).at("distance") км ]
+                ))
+                break
+            }
+        }
+        linebreak()
+        if ("rest" in value.train.at(index)) {
+            box(rect(
+                stroke: 1pt,
+                fill: rgb(230, 230, 230),
+                list(
+                    marker: [--],
+                    indent: 10pt,
+                    [ Отдых]
+                )
+            ))
+            box(rect(
+                [ #value.train.at(index).at("rest") мин. ] 
+            ))
         }
         linebreak()
     }
