@@ -37,7 +37,7 @@
                     value.train.at(index).at(round)
                 )) 
             }
-            if (value.train.at(index).type == "Ходьба") {
+            if (value.train.at(index).type == "Ходьба" or value.train.at(index).type == "Бег") {
                 box(rect(
                     [ #value.train.at(index).at("distance") км ]
                 ))
