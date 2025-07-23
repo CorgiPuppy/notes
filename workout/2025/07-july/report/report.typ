@@ -1,5 +1,3 @@
-#import table: cell, header
-
 #set text(
 	font: "New Computer Modern",
     weight: "extrabold"
