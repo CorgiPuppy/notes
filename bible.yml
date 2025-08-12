@@ -1,0 +1,26 @@
+lesson:
+    type: Article
+    author:
+        - Prekas, George
+        - Kogias, Marios
+        - Bugnion, Edouard
+    title:
+        value: "ZygOS: Achieving Low Tail Latency for Microsecond-Scale Networked Tasks"
+        verbatim: true
+    date: 2017
+    page-range: 325-341
+    serial-number:
+        doi: 10.1145/3132747.3132780
+
+harry:
+    type: Chapter
+    page-range: 135-139
+    serial-number: 3
+    parent:
+        title: Harry Potter and the Order of the Phoenix
+        author: Rowling, J. K.
+        volume: 5
+        volume-total: 7
+        serial-number: { isbn: 978-0747551003 }
+        page-total: 768
+        date: ~2003-06-21
