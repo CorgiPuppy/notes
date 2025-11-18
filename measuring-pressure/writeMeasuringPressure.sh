@@ -10,7 +10,7 @@ if [[ "$answerMorning" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
 	echo -n "Left hand at morning: "
 	read pressureMorningLeft pulseMorningLeft
-	echo -n "\"$(date +"%d.%m.%Y")\",$pressureMorningLeft,$pulseMorningLeft," >> $FILE
+	echo -n "$(date +"%d.%m.%Y"),$pressureMorningLeft,$pulseMorningLeft," >> $FILE
 
 	echo -n "Right hand at morning: "
 	read pressureMorningRight pulseMorningRight
