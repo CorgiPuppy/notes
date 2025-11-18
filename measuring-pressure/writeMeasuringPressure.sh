@@ -43,11 +43,11 @@ then
 		git commit -m  "feat: add results for today's morning."
 	fi
 
-	echo -n "\tPush afternuon?: "
-	read answerAfternuon
-	if [[ "$answerAfternuon" =~ ^([yY][eE][sS]|[yY])$ ]]
+	echo -n "\tPush afternoon?: "
+	read answerAfternoon
+	if [[ "$answerAfternoon" =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
-		git commit -m  "feat: add results for today's afternuon."
+		git commit -m  "feat: add results for today's afternoon."
 	fi
 
 	echo -n "\tPush evening?: "
