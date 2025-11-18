@@ -27,7 +27,7 @@ then
 
 	echo -n "Right hand at evening: "
 	read pressureEveningRight pulseEveningRight
-	echo -n "$pressureEveningRight,$pulseEveningRight" >> $FILE
+	echo "$pressureEveningRight,$pulseEveningRight" >> $FILE
 fi
 
 echo -n "Commit and Push?: "
