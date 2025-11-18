@@ -6,11 +6,11 @@ cd $FOLDER
 
 echo -n "Old testament: "
 read amount chapters
-echo -n "\"$(date +"%d.%m.%Y")\",$amount,$chapters," >> $FILE
+echo -n "\"$(date +"%d.%m.%Y")\",$amount,\"$chapters\"," >> $FILE
 
 echo -n "New testament: "
 read amount chapters
-echo "$amount,$chapters,,,,,," >> $FILE
+echo "$amount,\"$chapter\"s,,,,,," >> $FILE
 
 echo -n "Commit and Push?: "
 read answer
