@@ -53,5 +53,7 @@
 #let resultsFileName = "results.csv"
 #for month in allMonths {
     createTable(csv(path + "/" + month + "/" + resultsFileName))
-    pagebreak()
+    if month != allMonths.last() {
+        pagebreak()
+    }
 }
