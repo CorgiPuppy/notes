@@ -1,5 +1,5 @@
 #!/bin/bash
-declare FOLDER="2025/12-december/"
+declare FOLDER="2026/01-january/"
 declare FILE=results.csv
 
 cd $FOLDER
