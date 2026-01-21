@@ -40,23 +40,23 @@ echo -n "Commit and Push?: "
 read answerCommitAndPush
 if [[ "$answerCommitAndPush" =~ ^([yY][eE][sS]|[yY])$ ]]
 then
-	git add $FILE
+	git add .
 
-	echo -n "\tPush morning?: "
+	echo -n -e "\tPush morning?: "
 	read answerMorning
 	if [[ "$answerMorning" =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
 		git commit -m  "feat: add results for today's morning."
 	fi
 
-	echo -n "\tPush afternoon?: "
+	echo -n -e "\tPush afternoon?: "
 	read answerAfternoon
 	if [[ "$answerAfternoon" =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
 		git commit -m  "feat: add results for today's afternoon."
 	fi
 
-	echo -n "\tPush evening?: "
+	echo -n -e "\tPush evening?: "
 	read answerEvening
 	if [[ "$answerEvening" =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
