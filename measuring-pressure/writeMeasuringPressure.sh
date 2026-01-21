@@ -1,8 +1,10 @@
 #!/bin/bash
-declare FOLDER="2026/01-january"
+declare FOLDER_YEAR="2026"
+declare FOLDER_MONTH="01-january"
+
 declare FILE=results.csv
 
-cd $FOLDER
+cd $FOLDER_YEAR/$FOLDER_MONTH
 
 echo -n "Morning?: "
 read answerMorning
@@ -30,7 +32,8 @@ then
 	echo "$pressureEveningRight,$pulseEveningRight" >> $FILE
 
 	cd -
-	typst compile --root . $FOLDER/report/report.typ
+	typst compile --root . $FOLDER_YEAR/$FOLDER_MONTH/report/report.typ
+	typst compile --root . $FOLDER_YEAR/report/report.typ
 fi
 
 echo -n "Commit and Push?: "
