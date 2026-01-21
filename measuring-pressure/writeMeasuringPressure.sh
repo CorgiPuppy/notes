@@ -1,5 +1,5 @@
 #!/bin/bash
-declare FOLDER="2026/01-january/"
+declare FOLDER="2026/01-january"
 declare FILE=results.csv
 
 cd $FOLDER
@@ -28,6 +28,9 @@ then
 	echo -n "Right hand at evening: "
 	read pressureEveningRight pulseEveningRight
 	echo "$pressureEveningRight,$pulseEveningRight" >> $FILE
+
+	cd -
+	typst compile --root . $FOLDER/report/report.typ
 fi
 
 echo -n "Commit and Push?: "
