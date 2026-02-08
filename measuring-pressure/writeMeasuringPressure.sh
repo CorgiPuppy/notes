@@ -1,6 +1,6 @@
 #!/bin/bash
 declare FOLDER_YEAR="2026"
-declare FOLDER_MONTH="01-january"
+declare FOLDER_MONTH="02-february"
 
 declare FILE=results.csv
 
