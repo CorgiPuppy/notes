@@ -15,13 +15,13 @@
 
         // English version of the header
         
-        cell([Date], rowspan: 3), cell([Sleep], colspan: 2), cell([Hygiene], colspan: 7), cell([Learning, \ hours], rowspan: 3), cell([Workout, \ hours], rowspan: 3),
+        cell([Date], rowspan: 3), cell([Sleep], colspan: 2), cell([Hygiene], colspan: 7), cell([CI, \ hours], rowspan: 3), cell([Workout, \ hours], rowspan: 3),
         cell([Lights out], rowspan: 2), cell([Getting up], rowspan: 2), cell([Afternoon], colspan: 3), cell([Evening], colspan: 4),
         [Brush], [Irrigator], [Mouthwash], [Brush], [Irrigator], [Mouthwash], [Mouth guards],
        
         // Russian version of the header
         /*
-        cell([Дата], rowspan: 3), cell([Сон], colspan: 2), cell([Гигиена], colspan: 7),  cell([Обучение, \ час.], rowspan: 3), cell([Тренировка, \ час.], rowspan: 3),
+        cell([Дата], rowspan: 3), cell([Сон], colspan: 2), cell([Гигиена], colspan: 7),  cell([ПВ, \ час.], rowspan: 3), cell([Тренировка, \ час.], rowspan: 3),
         cell([Отбой], rowspan: 2), cell([Подъём], rowspan: 2), cell([День], colspan: 3), cell([Вечер], colspan: 4),
         [Щётка], [Ирригатор], [Ополаскиватель], [Щётка], [Ирригатор], [Ополаскиватель], [Капы],
         */
@@ -37,7 +37,7 @@
             irrigator-cell(row.at(7)),
             mouthwash-cell(row.at(8)),
             mouth-guards-cell(row.at(9)),
-            learning-cell(row.at(10)),
+            ci-cell(row.at(10)),
             workout-cell(row.at(11))
         )).flatten()
     )
