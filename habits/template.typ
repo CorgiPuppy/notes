@@ -60,11 +60,11 @@
         )
 
         if (date == date-today) {
-            if (time.hour() == 06 and time.minute() == 00) {
+            if (time.hour() == 06 and time.minute() == 30) {
                 cell(value, fill: rgb(0, 255, 0))
-            } else if ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 06 and time.minute() <= 30)) {
+            } else if ((time.hour() == 06 and time.minute() >= 00) or (time.hour() == 07 and time.minute() <= 00)) {
                 cell(value, fill: yellow)     
-            } else if ((time.hour() == 05 and time.minute() < 30) or (time.hour() == 06 and time.minute() > 30)) {
+            } else if ((time.hour() == 06 and time.minute() < 00) or (time.hour() == 07 and time.minute() > 00)) {
                 cell(value, fill: rgb(255, 165, 0))
             } else {
                 cell(value, fill: rgb(255, 0, 0))
@@ -130,21 +130,21 @@
     value
   }
 }
-#let ci-cell(value) = {
+#let learning-cell(value) = {
   if value != "" {
     let num = int(value)
     value = str(calc.round(duration(minutes: num).hours(), digits: 2))
     if num == 0 {
       cell(value, fill: rgb(255, 0, 0))
-    } else if num > 0 and num < 60 {
+    } else if num > 0 and num < 120 {
       cell(value, fill: rgb(255, 165, 0))
-    } else if num >= 60 and num < 120 {
+    } else if num >= 120 and num < 240 {
       cell(value, fill: rgb(255, 205, 0))
-    } else if num >= 120 and num < 180 {
+    } else if num >= 240 and num < 360 {
       cell(value, fill: rgb(225, 225, 0))
-    } else if num >= 180 and num < 240 {
+    } else if num >= 360 and num < 480 {
       cell(value, fill: rgb(200, 255, 0))
-    } else if num == 240 {
+    } else if num == 480 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
       cell(value, fill: rgb(0, 255, 255))
@@ -168,6 +168,29 @@
     } else if num >= 45 and num < 60 {
       cell(value, fill: rgb(200, 255, 0))
     } else if num == 60 {
+      cell(value, fill: rgb(0, 255, 0))
+    } else {
+      cell(value, fill: rgb(0, 255, 255))
+    }
+  } else {
+    value
+  }
+}
+#let ci-cell(value) = {
+  if value != "" {
+    let num = int(value)
+    value = str(calc.round(duration(minutes: num).hours(), digits: 2))
+    if num == 0 {
+      cell(value, fill: rgb(255, 0, 0))
+    } else if num > 0 and num < 60 {
+      cell(value, fill: rgb(255, 165, 0))
+    } else if num >= 60 and num < 120 {
+      cell(value, fill: rgb(255, 205, 0))
+    } else if num >= 120 and num < 180 {
+      cell(value, fill: rgb(225, 225, 0))
+    } else if num >= 180 and num < 240 {
+      cell(value, fill: rgb(200, 255, 0))
+    } else if num == 240 {
       cell(value, fill: rgb(0, 255, 0))
     } else {
       cell(value, fill: rgb(0, 255, 255))
