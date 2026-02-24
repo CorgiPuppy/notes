@@ -1,7 +1,8 @@
 #import "../../../template.typ": *
 
 #set page(
-  paper: "a3",
+  paper: "a4",
+  flipped: true,
   margin: (x: 0.8cm),
 )
 
