@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare FOLDER_YEAR="2026"
-declare FOLDER_MONTH="02-february"
+declare FOLDER_MONTH="03-march"
 declare FILE=results.csv
 
 cd $FOLDER_YEAR/$FOLDER_MONTH
