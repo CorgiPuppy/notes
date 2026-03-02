@@ -2,9 +2,11 @@
 
 #set page(
   paper: "a4",
+  flipped: true,
   margin: (x: 0.8cm),
 )
 
+#show figure: set block(breakable: true)
 #show table.cell: set text(weight: "extrabold")
 
 #let results = csv("../results.csv")
