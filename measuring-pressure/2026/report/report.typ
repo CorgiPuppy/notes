@@ -39,7 +39,8 @@
 #let path = ".."
 #let allMonths = (
     "01-january",
-    "02-february"
+    "02-february",
+    "03-march"
 )
 #let resultsFileName = "results.csv"
 #for month in allMonths {
