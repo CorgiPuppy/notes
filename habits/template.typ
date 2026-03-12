@@ -24,12 +24,14 @@
         )
 
         if (date == date-today - duration(days: 1)) {
-            if (time.hour() == 22 and time.minute() == 30) {
+            if (time.hour() == 22 and time.minute() >= 25 and time.minute() <= 35) {
                 cell(value, fill: rgb(0, 255, 0))
-            } else if (time.hour() >= 22 and time.hour() < 23) {
+            } else if ((time.hour() == 22 and ((time.minute() >= 00 and time.minute() < 25) or (time.minute() > 35 and time.minute() <= 59))) or (time.hour() == 23 and time.minute() == 00)) {
                 cell(value, fill: yellow)     
-            } else if ((time.hour() >= 21 and time.hour() < 22) or time.hour() == 23) {
+            } else if ((time.hour() == 21 and time.minute() >= 30 and time.minute() <= 59) or (time.hour() == 23 and time.minute() > 00 and time.minute() <= 30)) {
                 cell(value, fill: rgb(255, 165, 0))
+            } else {
+                cell(value, fill: rgb(255, 0, 0))
             }
         } else {
             cell(value, fill: rgb(255, 0, 0))
@@ -64,7 +66,7 @@
                 cell(value, fill: rgb(0, 255, 0))
             } else if ((time.hour() == 06 and time.minute() >= 00) or (time.hour() == 07 and time.minute() <= 00)) {
                 cell(value, fill: yellow)     
-            } else if ((time.hour() == 06 and time.minute() < 00) or (time.hour() == 07 and time.minute() > 00)) {
+            } else if ((time.hour() == 05 and time.minute() >= 30) or (time.hour() == 07 and time.minute() <= 30)) {
                 cell(value, fill: rgb(255, 165, 0))
             } else {
                 cell(value, fill: rgb(255, 0, 0))
