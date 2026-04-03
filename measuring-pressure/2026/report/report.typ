@@ -40,7 +40,8 @@
 #let allMonths = (
     "01-january",
     "02-february",
-    "03-march"
+    "03-march",
+    "04-april"
 )
 #let resultsFileName = "results.csv"
 #for month in allMonths {
