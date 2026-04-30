@@ -3,7 +3,7 @@
 git pull origin master
 
 declare FOLDER_YEAR="2026"
-declare FOLDER_MONTH="04-april"
+declare FOLDER_MONTH="05-may"
 
 declare FILE=results.csv
 
