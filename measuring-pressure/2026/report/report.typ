@@ -41,7 +41,7 @@
     "01-january",
     "02-february",
     "03-march",
-    "04-april" 
+    "04-april", 
     "05-may"
 )
 #let resultsFileName = "results.csv"
