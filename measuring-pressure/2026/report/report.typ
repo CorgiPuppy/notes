@@ -43,7 +43,9 @@
     "03-march",
     "04-april", 
     "05-may",
-    "06-june"
+    "06-june",
+    "07-july",
+    "08-august"
 )
 #let resultsFileName = "results.csv"
 #for month in allMonths {
