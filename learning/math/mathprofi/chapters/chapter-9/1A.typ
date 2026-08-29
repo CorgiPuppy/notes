@@ -6,4 +6,18 @@
 
 2. $y = 2e^(-2x)$
 
-3.
+3. $(2y + 1)sin^(2)x = C, "где" C = "const"$
+
+4. $y = e^(frac(1, x))$
+
+5. $y = ln(e^(x^2) + 1)$
+
+6. $arcsin x + sqrt(3 + y^2) = C, "где" C = "const"$
+
+7. $"arctg"(y^2) + x - ln abs(x + 1) = C, "где" C = "const"$
+
+8. $- frac(1, 2) cos 2y = frac(1, sin x) - frac(3, 2)$
+
+9.
+
+10.
